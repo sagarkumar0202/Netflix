@@ -61,8 +61,8 @@ def signup():
         return redirect('/')
    
     return render_template("signup.html")
-@app.route('/signup1', methods=['GET', 'POST'])
-def signup1():
+@app.route('/forgot', methods=['GET', 'POST'])
+def forgot():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
@@ -72,14 +72,14 @@ def signup1():
         cur = conn.cursor()
         cur.execute("SELECT * FROM users WHERE email=?", (email,))
         if cur.fetchone():
-            return render_template("signup1.html", error="User already exists")
+            return render_template("forgot.html", error="User already exists")
        
         cur.execute("INSERT INTO users (email, password) VALUES (?, ?)", (email, password))
         conn.commit()
         conn.close()
         return redirect('/')
    
-    return render_template("signup1.html")
+    return render_template("forgot.html")
 
 @app.route('/home', methods=['GET', 'POST'])
 def home():
