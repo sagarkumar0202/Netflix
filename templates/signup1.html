@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Netflix Sign Up</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+</head>
+<body class="signup-body">
+
+  <div class="netflix-logo">NETFLIX</div>
+
+  <div class="signup-wrapper">
+    <div class="signup-box">
+      <h2>Change Your Password</h2>
+
+      {% if error %}
+        <p class="error-msg">{{ error }}</p>
+      {% endif %}
+
+      <form method="POST" class="signup-form">
+        <input type="password" name="Password" placeholder="Enter Your New Password" required>
+        <input type="password" name="password" placeholder="Re-Enter Your password" required>
+        <button type="submit" class="signup-btn">Submit</button>
+      </form>
+
+      <div class="login-link">
+        <p>Already have an account? <a href="/">Sign in</a></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

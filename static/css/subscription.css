@@ -1,0 +1,35 @@
+body {
+  background-color: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  color: #e50914;
+  margin-bottom: 40px;
+}
+
+.plans button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #e50914;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.plans button:hover {
+  background-color: #b20710;
+}

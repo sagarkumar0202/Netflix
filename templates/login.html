@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Netflix Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body class="login-body">
+
+  <div class="netflix-logo">NETFLIX</div>
+
+  <div class="login-wrapper">
+    <div class="login-box">
+      <h1>Sign In</h1>
+
+      {% if error %}
+        <p class="error-msg">{{ error }}</p>
+      {% endif %}
+
+      <form method="POST" class="login-form">
+        <input type="text" name="email" placeholder="Email or mobile number" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit" class="login-btn">Sign In</button>
+      </form>
+
+      <div class="extra-options">
+        <p><a href="/signup1" class="forgot">Forgot password?</a></p>
+        <p><input type="checkbox" checked> Remember me</p>
+        <p class="or-line">OR</p>
+        <button class="signin-code">Use a sign-in code</button>
+      </div>
+
+      <div class="signup-link">
+        <p>New to Netflix? <a href="/signup">Sign up now</a></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

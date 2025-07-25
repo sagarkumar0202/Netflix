@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ movie }} – Watch Now</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='watch.css') }}">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">NETFLIX</div>
+    <div class="nav-actions">
+      <a class="vis" href="/visualize">Visualization</a>
+      <a class="vis" href="/admin">Admin</a>
+      <span class="user">👤 {{ session['user'] }}</span>
+      <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+    </div>
+  </div>
+
+  <!-- Watch Section -->
+  <div class="watch-section">
+    <h1>🎬 {{ movie }}</h1>
+    <p>Click below to watch your movie:</p>
+    <a href="{{ link }}" target="_blank" class="watch-btn">▶ Watch Now on YouTube</a>
+    <br><br>
+    <a href="/home" class="back-link">⬅ Back to Home</a>
+  </div>
+
+</body>
+</html>

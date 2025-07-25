@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Netflix Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">NETFLIX</div>
+    <div class="nav-actions">
+      <a class="vis" href="/visualize">Visualization</a>
+      <a class="vis" href="/subscriptions">Subscription</a>
+      <a class="vis" href="/admin">Admin</a>
+      <span class="user">👤 {{ username }}</span>
+      <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Unlimited movies, TV shows and more</h1>
+      <p>Welcome, {{ username }}!</p>
+    </div>
+
+    <div class="recommendation-section">
+      <h2>🔥 Trending Now (Rating > 9):</h2>
+      <div class="movie-list">
+        {% for movie in trending %}
+          <div class="movie-card">{{ movie }}</div>
+        {% endfor %}
+      </div>
+    </div>
+    <br>
+
+    <form method="POST" action="/home" class="form-box">
+      <select name="movie" required class="dropdown">
+        <option value="" disabled selected>Select a movie...</option>
+        {% for movie in movie_list %}
+          <option value="{{ movie }}">{{ movie }}</option>
+        {% endfor %}
+      </select>
+      <button type="submit" class="btn">Recommend</button>
+    </form>
+
+    {% if recommended %}
+    <div class="recommendation-section">
+      <h2>🎯 You May Also Like:</h2>
+      <div class="movie-list">
+        {% for rec in recommended %}
+         <div class="movie-card">
+  <img src="{{ url_for('static', filename='img/' + rec.image) }}" alt="{{ rec.title }}" class="movie-poster">
+  <h3 class="movie-title">{{ rec.title }}</h3>
+  <p><strong>Genre:</strong> {{ rec.genre }}</p>
+  <p><strong>Language:</strong> {{ rec.language }}</p>
+  <p><strong>Rating:</strong> ⭐ {{ rec.rating }}</p>
+  <a href="/watch/{{ rec.title }}" class="watch-btn">▶ Watch Now</a>
+</div>
+
+
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+</body>
+</html>

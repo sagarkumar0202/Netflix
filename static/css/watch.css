@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #e50914;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user {
+  font-weight: bold;
+}
+
+.logout-btn {
+  padding: 8px 15px;
+  background-color: #e50914;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.vis {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.vis:hover {
+  background-color: red;
+  color: white;
+}
+
+/* Watch Section */
+.watch-section {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.watch-section h1 {
+  font-size: 2.5rem;
+  color: #e50914;
+  margin-bottom: 10px;
+}
+
+.watch-section p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.watch-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.watch-btn:hover {
+  background-color: #b0060f;
+}
+
+.back-link {
+  color: #e50914;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+}

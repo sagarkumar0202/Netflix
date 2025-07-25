@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #e50914;
+}
+
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.user {
+  font-weight: bold;
+}
+
+
+.logout-btn {
+  padding: 8px 15px;
+  background-color: #e50914;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+.hero {
+  text-align: center;
+  padding: 100px 20px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+}
+
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+
+.form-box {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+
+.dropdown {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  width: 250px;
+}
+
+
+.btn {
+  padding: 10px 20px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.recommendation-section {
+  margin-top: 40px;
+}
+
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+
+.movie-card {
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  font-weight: normal;
+  width: 220px;
+  text-align: left;
+  line-height: 1.5;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(255, 0, 0, 0.5);
+  background-color: #2a2a2a;
+}
+
+.vis {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.vis:hover {
+  background-color: red;
+  color: white;
+}
+
+.movie-poster{
+  width: 100%;
+  height:280px;
+}
+
+.watch-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.watch-btn:hover {
+  background-color: #b0060f;
+}

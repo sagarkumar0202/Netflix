@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Netflix Movie Insights</title>
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      text-align: center;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(229, 9, 20, 0.3);
+    }
+
+    h1 {
+      color: #e50914;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #bbb;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .insight-img {
+      width: 100%;
+      border-radius: 12px;
+      border: 4px solid #e50914;
+      box-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .insight-img:hover {
+      transform: scale(1.01);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 25px;
+      color: #e50914;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Netflix Movie Insights</h1>
+    <p>Explore language distribution and top-rated genres from our movie dataset</p>
+
+    <img src="data:image/png;base64,{{ plot }}" alt="Visual Charts" class="insight-img" />
+
+    <a href="/home" class="back-link">⬅ Back to Home</a>
+  </div>
+</body>
+</html>

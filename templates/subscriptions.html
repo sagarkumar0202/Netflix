@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose a Subscription Plan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/subscription.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Select Your Plan</h1>
+    <div class="plans">
+      <form action="/payment_success" method="POST">
+        <button name="plan" value="One Day">One Day – ₹10</button>
+        <button name="plan" value="Monthly">Monthly – ₹99</button>
+        <button name="plan" value="Yearly">Yearly – ₹999</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
